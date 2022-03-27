@@ -1,2 +1,2 @@
 # github-search
-Discover Github users.
+Discover Github users
