@@ -4,7 +4,6 @@ import AboutPage from "./pages/About";
 import HomePage from "./pages/Home";
 
 function App() {
-  // const searchValue = useSelector((state: storeProps) => state.search.value);
 
   return (
     <div className="App">

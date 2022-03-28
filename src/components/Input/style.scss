@@ -1,0 +1,12 @@
+.input-box {
+  font-size: 1em;
+  padding: 0.5em;
+  outline: none;
+  border: 0.18em solid #ccc;
+  border-radius: 0.5em;
+  transition: all ease 0.2s;
+
+  &:focus {
+    border: 0.18em solid currentColor;
+  }
+}
