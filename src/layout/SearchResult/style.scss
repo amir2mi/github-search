@@ -1,0 +1,11 @@
+.search-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding-top: 1em;
+
+  .result-item {
+    flex-basis: calc(33.33% - 1em);
+    text-decoration: none;
+  }
+}
