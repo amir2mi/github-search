@@ -24,7 +24,7 @@ export default function SearchBox() {
   };
 
   return (
-    <form className="search-box" onSubmit={(e) => handleOnSubmit(e)}>
+    <form className="search-box anim-rise-in-delay" onSubmit={(e) => handleOnSubmit(e)}>
       <div className={clsx("search-bar", "flex-center", localValue && "has-value")}>
         {localValue && (
           <Button className="clear-button anim-pop-in" onClick={clearInput}>

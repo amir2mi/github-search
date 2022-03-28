@@ -23,3 +23,22 @@
 .anim-pop-in {
   animation: pop-in ease 0.2s;
 }
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0.75em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-rise-in {
+  animation: rise-in ease 0.2s;
+}
+.anim-rise-in-delay {
+  animation: rise-in .3s .1s both;
+}
+
