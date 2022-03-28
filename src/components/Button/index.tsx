@@ -3,11 +3,11 @@ import "./style.scss";
 
 interface ButtonProps {
   [key: string]: any;
-  onClick: () => void;
+  className?: string;
 }
 
 export default function Button(props: ButtonProps) {
-  const { className, onClick, ...rest } = props;
+  const { className, ...rest } = props;
 
-  return <button {...rest} className={clsx("button", className)} onClick={onClick} />;
+  return <button {...rest} className={clsx("button", className)} />;
 }
