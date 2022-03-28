@@ -1,6 +1,7 @@
 import { Navigate, Routes, Route } from "react-router-dom";
 import Header from "./layout/Header";
 import AboutPage from "./pages/About";
+import HomePage from "./pages/Home";
 
 function App() {
   // const searchValue = useSelector((state: storeProps) => state.search.value);
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/user/:id" element={<AboutPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/" element={<AboutPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
