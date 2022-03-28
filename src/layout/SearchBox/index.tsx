@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import clsx from "clsx";
 import { X, Search } from "react-feather";
-import { storeProps } from "../../store";
+import { useDispatch } from "react-redux";
 import { setSearchValue } from "../../store/searchSlice";
 import { Button, Input } from "../../components";
 import "./style.scss";
 
 export default function SearchBox() {
   const dispatch = useDispatch();
-  const searchValue = useSelector((state: storeProps) => state.search.value);
 
   // use local value to save and display the search box value
   // onSubmit use this value and update Redux store
