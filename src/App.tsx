@@ -1,18 +1,16 @@
-import { storeProps } from "./store";
-import { useSelector } from "react-redux";
+import { Navigate, Routes, Route } from "react-router-dom";
+import AboutPage from "./pages/About";
 
 function App() {
-  const searchValue = useSelector((state: storeProps) => state.search.value);
-  console.log(searchValue);
+  // const searchValue = useSelector((state: storeProps) => state.search.value);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>{searchValue}</p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/user/:id" element={<AboutPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 }
