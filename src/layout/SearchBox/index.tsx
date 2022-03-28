@@ -11,6 +11,7 @@ export default function SearchBox() {
   return (
     <div className="search-box flex-center">
       <Input value={searchValue} onChange={(value) => dispatch(setSearchValue({ value }))} />
+      
     </div>
   );
 }
