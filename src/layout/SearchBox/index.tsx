@@ -28,12 +28,12 @@ export default function SearchBox() {
       <h2 className="title">Discover Github Users</h2>
       <div className={clsx("search-bar", "flex-center", localValue && "has-value")}>
         {localValue && (
-          <Button className="clear-button anim-pop-in" onClick={clearInput}>
+          <Button type="reset" className="clear-button anim-pop-in" onClick={clearInput}>
             <X />
           </Button>
         )}
-        <Input value={localValue} placeHolder="Enter Username" onChange={(value) => setLocalValue(value)} />
-        <Button className="search-button">
+        <Input value={localValue} placeholder="Enter Username" onChange={(value) => setLocalValue(value)} />
+        <Button type="submit" className="search-button">
           <Search />
         </Button>
       </div>
