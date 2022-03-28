@@ -4,7 +4,12 @@
   outline: none;
   border: 0.18em solid #ccc;
   border-radius: 0.5em;
-  transition: all ease 0.2s;
+  transition: all ease 0.15s;
+
+  &:hover,
+  &:active {
+    border: 0.18em solid #aaa;
+  }
 
   &:focus {
     border: 0.18em solid currentColor;

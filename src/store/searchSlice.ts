@@ -6,7 +6,7 @@ export interface SearchState {
 }
 
 const initialState: SearchState = {
-  value: "test",
+  value: "",
   items: [],
 };
 
