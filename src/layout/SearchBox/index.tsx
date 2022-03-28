@@ -14,7 +14,7 @@ export default function SearchBox() {
     <div className="search-box">
       <div className={clsx("search-bar", "flex-center", searchValue && "has-value")}>
         {searchValue && (
-          <Button className="clear-button" onClick={() => console.log("clear")}>
+          <Button className="clear-button anim-pop-in" onClick={() => console.log("clear")}>
             <X />
           </Button>
         )}

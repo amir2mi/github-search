@@ -1,0 +1,25 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.anim-fade-in {
+  animation: fade-in ease 0.2s;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.anim-pop-in {
+  animation: pop-in ease 0.2s;
+}
