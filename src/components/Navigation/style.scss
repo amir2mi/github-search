@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.5em;
+  color: #fff;
+  background: #090d10;
+
+  .right-links {
+    .link {
+      color: currentColor;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      margin: 0 0.25em;
+      border-radius: 0.5em;
+      transition: all ease 0.15s;
+
+      &.active {
+        color: #090d10;
+        background: #fff;
+      }
+    }
+  }
+}

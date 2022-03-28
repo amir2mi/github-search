@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@each $name, $value in $RESPONSIVE_BREAKPOINTS {
+  // xs and sm are the same
+  @if $name != "xs" {
+    .container-#{$name} {
+      max-width: math.floor($value);
+    }
+  }
+}
+
+[class*="container-"] {
+  padding-left: 0.64em;
+  padding-right: 0.64em;
+  margin-left: auto;
+  margin-right: auto;
+}

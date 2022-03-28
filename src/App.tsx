@@ -1,4 +1,5 @@
 import { Navigate, Routes, Route } from "react-router-dom";
+import Header from "./layout/Header";
 import AboutPage from "./pages/About";
 
 function App() {
@@ -6,9 +7,11 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Routes>
-        <Route path="/about" element={<AboutPage />} />
         <Route path="/user/:id" element={<AboutPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/" element={<AboutPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
