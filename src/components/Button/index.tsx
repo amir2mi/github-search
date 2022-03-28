@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import "./style.scss";
 
 interface ButtonProps {
@@ -6,7 +7,7 @@ interface ButtonProps {
 }
 
 export default function Button(props: ButtonProps) {
-  const { onClick, ...rest } = props;
+  const { className, onClick, ...rest } = props;
 
-  return <button {...rest} className="button" onClick={onClick} />;
+  return <button {...rest} className={clsx("button", className)} onClick={onClick} />;
 }

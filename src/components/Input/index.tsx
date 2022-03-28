@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import "./style.scss";
 
 interface InputProps {
@@ -6,6 +7,6 @@ interface InputProps {
 }
 
 export default function Input(props: InputProps) {
-  const { onChange, ...rest } = props;
-  return <input {...rest} className="input-box" onChange={(e) => onChange(e.target.value)} />;
+  const { className, onChange, ...rest } = props;
+  return <input {...rest} className={clsx("input-box", className)} onChange={(e) => onChange(e.target.value)} />;
 }

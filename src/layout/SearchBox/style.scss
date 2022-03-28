@@ -1,9 +1,17 @@
 .search-box {
   margin: 3em 0;
+}
 
+.search-bar {
   .input-box {
     font-size: 1.1em;
     min-width: 40em;
     padding: 1em;
+  }
+
+  .search-button {
+    color: #090d10;
+    background: #fff;
+    font-size: 1.25em;
   }
 }
