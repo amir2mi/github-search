@@ -3,15 +3,29 @@
 }
 
 .search-bar {
+  position: relative;
+  max-width: 100%;
+  width: 40em;
+  margin: 0 auto;
+
   .input-box {
     font-size: 1.1em;
-    min-width: 40em;
-    padding: 1em;
+    width: 100%;
+    padding: 1em 3.5em 1em 1em;
   }
 
   .search-button {
+    position: absolute;
+    top: 0.38em;
+    right: 0;
+    padding: 1em;
+    margin-right: 0.5em;
     color: #090d10;
     background: #fff;
-    font-size: 1.25em;
+
+    svg {
+      width: 2em;
+      height: 2em;
+    }
   }
 }
