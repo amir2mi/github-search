@@ -6,6 +6,18 @@
   box-shadow: 0 0 0.18em rgba(0, 0, 0, 0.1), 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   border-radius: 1em;
 
+  @media (max-width: 767px) {
+    font-size: 0.9em;
+
+    .icon {
+      display: none;
+    }
+
+    .links {
+      font-size: 0.9em;
+    }
+  }
+
   &:hover {
     .icon {
       opacity: 1;
@@ -55,6 +67,8 @@
     border-radius: 0.5em;
 
     svg {
+      width: 1.5em;
+      height: 1.5em;
       margin-right: 0.5em;
     }
   }
