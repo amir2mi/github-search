@@ -1,11 +1,20 @@
 .user-states {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 0.9em;
+  max-width: 720px;
+  margin: 0 auto;
 
   .state {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0 1em;
+    margin: 0.32em 1em;
     opacity: 0.75;
+
+    @media (max-width: 767px) {
+      flex-basis: calc(50% - 2em);
+    }
 
     svg {
       width: 1.25em;
