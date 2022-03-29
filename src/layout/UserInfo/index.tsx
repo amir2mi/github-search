@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { GitHub } from "react-feather";
 import { storeProps } from "../../store";
 import type { User } from "../../store/users";
-import { Button } from "../../components";
 import "./style.scss";
 
 export default function UserInfo() {
@@ -18,11 +18,23 @@ export default function UserInfo() {
   }, [cachedUsers, username]);
 
   return (
-    <div className="user-info">
-      <img src={user.avatar_url} alt={user.name} />
-      <h2>{user.name}</h2>
-      <p>{user.bio}</p>
-      <Button type="primary">GitHub Profile</Button>
+    <div className="user-info flex-center">
+      <img className="avatar" src={user.avatar_url} alt={user.name} />
+      <div className="title-wrapper flex-center">
+        <h2 className="title">{user.name}</h2>
+        <a
+          className="button github-profile"
+          href={user.html_url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Go to GitHub profile"
+        >
+          <GitHub />
+        </a>
+      </div>
+      <p className="username">{user.login}</p>
+
+      <p className="bio">{user.bio}</p>
     </div>
   );
 }

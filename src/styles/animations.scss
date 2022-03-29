@@ -61,9 +61,9 @@
 }
 
 .anim-turn {
-  animation: turn ease 1.5s;
+  animation: turn ease 1.5s infinite;
 }
 
 .anim-turn-linear {
-  animation: turn linear 1.5s;
+  animation: turn linear 1.5s infinite;
 }

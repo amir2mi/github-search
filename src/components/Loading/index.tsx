@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { Loader } from "react-feather";
+import "./style.scss";
 
 interface LoadingProps {
   [key: string]: any;
@@ -9,7 +10,7 @@ interface LoadingProps {
 
 export default function Loading({ className, size, ...rest }: LoadingProps) {
   return (
-    <div className="loading">
+    <div className="loading-wrapper">
       <Loader {...rest} className={clsx("loading", "anim-turn-linear", className)} size={size || 48} />
     </div>
   );
