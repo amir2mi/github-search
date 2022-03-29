@@ -6,6 +6,7 @@ import config from "../../config";
 import UserInfo from "../../layout/UserInfo";
 import UserStates from "../../layout/UserStates";
 import { Container, Loading } from "../../components";
+import { disableLoading } from "../../store/users";
 
 export default function UserPage() {
   const dispatch = useDispatch();
@@ -13,6 +14,12 @@ export default function UserPage() {
   const { username } = useParams();
 
   useEffect(() => {
+    if (username && cachedUsers[username]) {
+      dispatch(disableLoading());
+      return;
+    }
+
+    // get user info
     dispatch({
       type: "callApi",
       payload: {
@@ -21,7 +28,18 @@ export default function UserPage() {
         onSuccess: "users/cacheUser",
       },
     });
-  }, [dispatch, username]);
+
+    // get user repositories
+    dispatch({
+      type: "callApi",
+      payload: {
+        url: `${config.apiBaseURL}${config.apiUserProfile}/${username}/repos`,
+        onStart: "users/enableLoading",
+        onSuccess: "users/cacheUserRepos",
+        additionalInfo: { username },
+      },
+    });
+  }, [cachedUsers, dispatch, username]);
 
   return (
     <Container size="lg">

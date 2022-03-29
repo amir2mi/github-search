@@ -4,7 +4,7 @@ const api = (store: any) => (next: any) => async (action: any) => {
   next(action);
   if (action.type !== "callApi") return;
 
-  const { url, method, data, onStart, onSuccess, onError } = action.payload;
+  const { url, method, data, onStart, onSuccess, onError, additionalInfo } = action.payload;
 
   try {
     // dispatch an action before api, it might be practical for showing loading.
@@ -18,7 +18,7 @@ const api = (store: any) => (next: any) => async (action: any) => {
     });
 
     // dispatch action to update state
-    store.dispatch({ type: onSuccess, payload: response.data });
+    store.dispatch({ type: onSuccess, payload: { data: response.data, ...additionalInfo } });
   } catch (e: any) {
     // dispatch action to handle error
     store.dispatch({ type: onError, payload: e.response.data });

@@ -34,8 +34,8 @@ const searchSlice = createSlice({
     },
     setItems: (state, action) => {
       state.isLoading = false;
-      state.resultCount = action.payload.total_count;
-      state.items = action.payload.items;
+      state.resultCount = action.payload.data.total_count;
+      state.items = action.payload.data.items;
     },
     clearItems: (state) => {
       state.isLoading = false;

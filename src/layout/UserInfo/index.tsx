@@ -33,8 +33,8 @@ export default function UserInfo() {
         </div>
       </a>
 
-      <h2 className="title">{user.name}</h2>
-      <p className="bio">{user.bio}</p>
+      <h2 className="title">{user.name || user.login}</h2>
+      {user.bio && <p className="bio">{user.bio}</p>}
     </div>
   );
 }
