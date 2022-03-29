@@ -5,7 +5,7 @@ import { UserBox } from "../../components";
 import "./style.scss";
 
 export default function SearchResult() {
-  const { isLoading, items, value } = useSelector((store: storeProps) => store.search);
+  const { isLoading, items, resultCount, value } = useSelector((store: storeProps) => store.search);
 
   return items?.length > 0 ? (
     <section className="search-result">
@@ -15,7 +15,9 @@ export default function SearchResult() {
         </Link>
       ))}
     </section>
+  ) : isLoading ? (
+    <h3>Loading...</h3>
   ) : (
-    <h3 className="anim-fade-in text-center">{isLoading ?  "Loading...": `No results for "${value}"`}</h3>
+    <>{resultCount === 0 && <h3 className="text-center anim-fade-in">No results for "{value}"</h3>}</>
   );
 }
