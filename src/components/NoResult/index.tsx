@@ -8,9 +8,9 @@ interface NoResultProps {
 
 export default function NoResult({ value }: NoResultProps) {
   return (
-    <div className="no-result-message flex-center">
+    <div className="no-result-message flex-center anim-rise-in">
       <Frown className="icon" />
-      <h3 className="title anim-fade-in">No results for "{value}"</h3>
+      <h3 className="title">No results for "{value}"</h3>
     </div>
   );
 }
