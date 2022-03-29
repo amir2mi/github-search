@@ -6,6 +6,11 @@
   color: #fff;
   background: #090d10;
 
+  @media (max-width: 575px) {
+    font-size: 0.75em;
+    padding: 1em;
+  }
+
   .right-links {
     .link {
       color: currentColor;

@@ -1,9 +1,13 @@
 .site-logo {
+  @media (max-width: 575px) {
+    font-size: 0.75em;
+  }
+
   .title {
     font-weight: normal;
     margin: 0;
   }
-  
+
   .icon {
     margin-right: 0.5em;
   }
