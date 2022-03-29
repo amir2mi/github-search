@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { storeProps } from "../../store";
-import { UserBox } from "../../components";
+import { FakeUserBox, UserBox } from "../../components";
 import "./style.scss";
 
 export default function SearchResult() {
@@ -16,7 +16,11 @@ export default function SearchResult() {
       ))}
     </section>
   ) : isLoading ? (
-    <h3>Loading...</h3>
+    <section className="search-result">
+      <FakeUserBox className="result-item" />
+      <FakeUserBox className="result-item" />
+      <FakeUserBox className="result-item" />
+    </section>
   ) : (
     <>{resultCount === 0 && <h3 className="text-center anim-fade-in">No results for "{value}"</h3>}</>
   );

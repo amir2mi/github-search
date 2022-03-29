@@ -1,0 +1,22 @@
+.fake-user-box {
+  background: #fff;
+
+  .avatar,
+  .title{
+    background: linear-gradient(to right, #ced9e3, #eff2f6, #ced9e3);
+    background-size: 800%;
+    animation: bg-position-x 1.5s ease infinite;
+  }
+  .avatar {
+
+    box-shadow: none !important;
+  }
+
+  .title {
+    width: min(250px, 90%);
+    margin-left: auto;
+    margin-right: auto;
+    color: transparent !important;
+    border-radius: 0.25em;
+  }
+}
