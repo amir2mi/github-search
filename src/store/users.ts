@@ -30,12 +30,21 @@ const userSlice = createSlice({
     },
     cacheUser: (state, action) => {
       const index = action.payload.data.login;
-      state.cachedUsers[index] = action.payload.data;
+      state.cachedUsers[index] = { ...state.cachedUsers[index], ...action.payload.data };
       state.isLoading = false;
     },
     cacheUserRepos: (state, action) => {
       const index = action.payload.username;
-      state.cachedUsers[index].repos = action.payload.data;
+
+      // users might not be cached.
+      // if the user object is not cached, create it, then add repos
+      if (state.cachedUsers.hasOwnProperty(index)) {
+        state.cachedUsers[index].repos = action.payload.data;
+      } else {
+        state.cachedUsers[index] = {};
+        state.cachedUsers[index].repos = action.payload.data;
+      }
+
       state.isLoading = false;
     },
   },

@@ -1,0 +1,33 @@
+.repository-box {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  margin: 1em 0 2em;
+  box-shadow: 0 0 0.18em rgba(0, 0, 0, 0.1), 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+
+  &:hover {
+    .icon {
+      opacity: 1;
+    }
+  }
+
+  .icon {
+    width: 4em;
+    height: 4em;
+    padding: 2em;
+    opacity: 0.5;
+    transition: opacity ease 0.15s;
+  }
+
+  .title{
+      font-size: 1.125em;
+      margin: 0;
+  }
+
+  .description{
+      font-size: 0.9em;
+      margin: 0;
+      opacity: 0.75;
+  }
+}
