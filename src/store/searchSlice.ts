@@ -7,11 +7,13 @@ interface SearchItem {
 
 export interface SearchState {
   value: string;
+  isLoading: boolean;
   items: SearchItem[];
 }
 
 const initialState: SearchState = {
   value: "",
+  isLoading: false,
   items: [],
 };
 

@@ -5,7 +5,7 @@ import { UserBox } from "../../components";
 import "./style.scss";
 
 export default function SearchResult() {
-  const { items, value } = useSelector((store: storeProps) => store.search);
+  const { isLoading, items, value } = useSelector((store: storeProps) => store.search);
 
   return items?.length > 0 ? (
     <section className="search-result">
@@ -16,6 +16,12 @@ export default function SearchResult() {
       ))}
     </section>
   ) : (
-    <>{value.length > 0 && <h3 className="anim-fade-in text-center">Nothing Found.</h3>}</>
+    <>
+      {isLoading ? (
+        <h3 className="anim-fade-in text-center">Loading...</h3>
+      ) : (
+        <h3 className="anim-fade-in text-center">No results for "{value}"</h3>
+      )}
+    </>
   );
 }
