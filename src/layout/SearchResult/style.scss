@@ -8,5 +8,13 @@
   .result-item {
     flex-basis: calc(33.33% - 1em);
     text-decoration: none;
+
+    @media (max-width: 767px) {
+      flex-basis: calc(50% - 1em);
+    }
+
+    @media (max-width: 575px) {
+      font-size: 0.85em;
+    }
   }
 }
