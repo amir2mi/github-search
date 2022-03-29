@@ -50,3 +50,20 @@
 .anim-rise-in-delay {
   animation: rise-in 0.3s 0.1s both;
 }
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.anim-turn {
+  animation: turn ease 1.5s;
+}
+
+.anim-turn-linear {
+  animation: turn linear 1.5s;
+}

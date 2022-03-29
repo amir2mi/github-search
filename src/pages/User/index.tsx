@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { storeProps } from "../../store";
 import config from "../../config";
 import UserInfo from "../../layout/UserInfo";
-import { Container } from "../../components";
+import { Container, Loading } from "../../components";
 
 export default function UserPage() {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ export default function UserPage() {
 
   return (
     <Container size="lg">
-      {isLoading && "Loading"}
+      {isLoading && <Loading className="fixed-loading" />}
       {username && cachedUsers[username] && <UserInfo />}
     </Container>
   );
