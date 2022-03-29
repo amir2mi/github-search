@@ -20,14 +20,25 @@
     transition: opacity ease 0.15s;
   }
 
-  .title{
-      font-size: 1.125em;
-      margin: 0;
+  .title {
+    font-size: 1.125em;
+    margin: 0;
   }
 
-  .description{
-      font-size: 0.9em;
-      margin: 0;
-      opacity: 0.75;
+  .description {
+    font-size: 0.9em;
+    margin: 0;
+    opacity: 0.75;
+  }
+
+  .topics {
+    .topic {
+      font-size: 0.75em;
+      padding: 0.25em 0.5em;
+      margin-right: 0.5em;
+      color: #fff;
+      background: #090d10;
+      border-radius: 0.5em;
+    }
   }
 }

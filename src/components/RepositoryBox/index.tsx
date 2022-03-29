@@ -26,12 +26,15 @@ export default function RepositoryBox(props: RepositoryBoxProps) {
           GitHub Page
         </a>
         <span className="license">{license}</span>
-        {topics.length > 0 &&
-          topics.map((topic) => (
-            <span key={topic} className="topic">
-              {topic}
-            </span>
-          ))}
+        {topics.length > 0 && (
+          <div className="topics">
+            {topics.map((topic) => (
+              <span key={topic} className="topic">
+                {topic}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </article>
   );
