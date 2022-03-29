@@ -23,6 +23,7 @@
   .input-box {
     width: 100%;
     padding: 1em 3em 1em 1em;
+    border-radius: 1em;
   }
 
   .clear-button,
@@ -38,7 +39,7 @@
     margin-bottom: auto;
     color: #090d10;
     background: #fff;
-    border-radius: 0.18em;
+    border-radius: 1em;
     transition: transform ease 0.15s;
 
     &:active {

@@ -6,18 +6,19 @@
   margin-top: 1.5em;
   color: #090d10;
   border-radius: 0.5em;
-  box-shadow: 0 0 0.18em rgba(0, 0, 0, 0.075), 0 0.18em 0.25em rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 0.18em rgba(0, 0, 0, 0.075), 0 0.1em 0.32em rgba(0, 0, 0, 0.1);
   will-change: box-shadow, transform;
-  transition: box-shadow ease 0.2s, transform ease 0.15s;
+  transition: box-shadow ease 0.2s, transform ease 0.15s 0.1s;
 
   &:hover,
   &:focus-within,
   &:focus {
     box-shadow: 0 0 0.18em rgba(0, 0, 0, 0.1), 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-    transform: translateY(-0.18em);
+    transform: translateY(-0.25em);
 
     .avatar-shadow {
       transform: translateY(0.25em);
+      filter: blur(0.64em) opacity(50%) saturate(150%);
     }
   }
 
@@ -43,13 +44,13 @@
 
   .avatar-shadow {
     position: absolute;
-    top: 0.25em;
+    top: 0.18em;
     left: 0;
     height: 0;
     border-radius: 5em;
-    filter: blur(0.64em) opacity(50%) saturate(150%);
-    will-change: transform;
-    transition: transform ease 0.25s;
+    filter: blur(0.25em) opacity(50%) saturate(150%);
+    will-change: transform, filter;
+    transition: transform ease 0.25s, filter ease 0.25s;
   }
 
   .title {
