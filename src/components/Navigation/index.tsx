@@ -18,7 +18,7 @@ export default function Navigation({ links }: NavigationProps) {
       {links && (
         <div className="right-links">
           {links.map(({ title, to }) => (
-            <NavLink to={to} className={({ isActive }) => (isActive ? "link active" : "link")}>
+            <NavLink key={title} to={to} className={({ isActive }) => (isActive ? "link active" : "link")}>
               {title}
             </NavLink>
           ))}
