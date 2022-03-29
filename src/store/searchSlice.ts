@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+interface SearchItem {
+  login: string;
+  avatar_url: string;
+}
+
 export interface SearchState {
   value: string;
-  items: [];
+  items: SearchItem[];
 }
 
 const initialState: SearchState = {

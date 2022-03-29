@@ -4,10 +4,9 @@ interface UserBoxProps {
   avatar: string;
   name: string;
   imageShadow?: boolean;
-  username: string;
 }
 
-export default function UserBox({ avatar, imageShadow, name, username }: UserBoxProps) {
+export default function UserBox({ avatar, imageShadow, name }: UserBoxProps) {
   return (
     <div className="user-box">
       <figure className="avatar-wrapper">
