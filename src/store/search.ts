@@ -24,9 +24,22 @@ const searchSlice = createSlice({
     setSearchValue: (state, action) => {
       state.value = action.payload.value;
     },
-    searchItems: (state, action) => {},
+    clearSearchValue: (state) => {
+      state.value = "";
+    },
+    startingSearch: (state) => {
+      state.isLoading = true;
+    },
+    setSearchItems: (state, action) => {
+      state.isLoading = false;
+      state.items = action.payload.data;
+    },
+    clearSearchItems: (state) => {
+      state.isLoading = false;
+      state.items = [];
+    },
   },
 });
 
-export const { setSearchValue, searchItems } = searchSlice.actions;
+export const { setSearchValue, clearSearchValue, startingSearch, setSearchItems } = searchSlice.actions;
 export default searchSlice.reducer;

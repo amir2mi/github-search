@@ -4,9 +4,13 @@ const api = (store: any) => (next: any) => async (action: any) => {
   next(action);
   if (action.type !== "callApi") return;
 
-  const { url, method, data, onSuccess, onError } = action.payload;
+  const { url, method, data, onSearch, onSuccess, onError } = action.payload;
 
   try {
+    // dispatch an action before api, it might be practical for showing loading.
+    store.dispatch({ type: onSearch });
+
+    // call api
     const response = await axios.request({
       url,
       method,
