@@ -1,4 +1,4 @@
-import { Folder } from "react-feather";
+import { Folder, GitHub, Home } from "react-feather";
 import "./style.scss";
 
 interface RepositoryBoxProps {
@@ -17,15 +17,22 @@ export default function RepositoryBox(props: RepositoryBoxProps) {
     <article className="repository-box">
       <Folder className="icon" />
       <div className="right-side">
-        <h3 className="title">{name}</h3>
+        <div className="title-wrapper">
+          <h3 className="title">{name}</h3>
+          <span className="license">{license}</span>
+        </div>
         <p className="description">{description}</p>
-        <a href={homepage} target="_blank" className="button" rel="noreferrer">
-          Homepage
-        </a>
-        <a href={url} target="_blank" className="button" rel="noreferrer">
-          GitHub Page
-        </a>
-        <span className="license">{license}</span>
+        <div className="links">
+          <a href={homepage} target="_blank" className="button" rel="noreferrer">
+            <Home />
+            Homepage
+          </a>
+          <a href={url} target="_blank" className="button" rel="noreferrer">
+            <GitHub />
+            GitHub Page
+          </a>
+        </div>
+
         {topics.length > 0 && (
           <div className="topics">
             {topics.map((topic) => (

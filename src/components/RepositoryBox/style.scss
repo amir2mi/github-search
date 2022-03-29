@@ -12,6 +12,10 @@
     }
   }
 
+  .right-side {
+    width: 100%;
+  }
+
   .icon {
     width: 4em;
     height: 4em;
@@ -20,18 +24,44 @@
     transition: opacity ease 0.15s;
   }
 
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+  }
+
   .title {
     font-size: 1.125em;
     margin: 0;
   }
 
+  .license {
+    font-size: 0.75em;
+    opacity: 0.5;
+  }
+
   .description {
     font-size: 0.9em;
-    margin: 0;
+    margin: 0 0 1em;
     opacity: 0.75;
   }
 
+  .button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 0.5em;
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+
   .topics {
+    margin-top: 0.5em;
+
     .topic {
       font-size: 0.75em;
       padding: 0.25em 0.5em;
