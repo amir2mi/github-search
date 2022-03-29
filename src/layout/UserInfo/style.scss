@@ -1,6 +1,6 @@
 .user-info {
   flex-direction: column;
-  padding: 2em 0;
+  padding: 2em 0 1.5em;
 
   .github-profile {
     position: relative;
@@ -21,7 +21,7 @@
         opacity: 1;
 
         svg {
-          animation: rise-in 0.25s 0.1s;
+          animation: rise-in 0.2s 0.1s;
         }
       }
     }
@@ -56,7 +56,7 @@
 
       p {
         margin: 0.5em 0 0;
-        opacity: 0.5;
+        opacity: 0.6;
       }
     }
 
@@ -75,8 +75,10 @@
   }
 
   .bio {
+    text-align: center;
     font-size: 1.2em;
-    margin: 0.38em 0 0;
+    max-width: 780px;
+    margin: 0.5em 0 0;
     opacity: 0.75;
   }
 }
