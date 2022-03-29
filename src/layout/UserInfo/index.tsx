@@ -19,21 +19,21 @@ export default function UserInfo() {
 
   return (
     <div className="user-info flex-center">
-      <img className="avatar" src={user.avatar_url} alt={user.name} />
-      <div className="title-wrapper flex-center">
-        <h2 className="title">{user.name}</h2>
-        <a
-          className="button github-profile"
-          href={user.html_url}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Go to GitHub profile"
-        >
-          <GitHub />
-        </a>
-      </div>
-      <p className="username">{user.login}</p>
+      <a
+        className="button github-profile"
+        href={user.html_url}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Visit GitHub profile"
+      >
+        <img className="avatar" src={user.avatar_url} alt={user.name} />
+        <div className="on-hover">
+          <GitHub size="48" />
+          <p>Go To GitHub</p>
+        </div>
+      </a>
 
+      <h2 className="title">{user.name}</h2>
       <p className="bio">{user.bio}</p>
     </div>
   );
