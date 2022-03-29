@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <div className="site-logo flex-center">
       <GitHub className="icon" />
-      <h1 className="title">Github Search</h1>
+      <h1 className="title">GitHub Search</h1>
     </div>
   );
 }

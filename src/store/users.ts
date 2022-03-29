@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface User {
-  [key: string]: string;
+export interface User {
+  [key: string]: any;
+  avatar_url?: string;
+  bio?: string;
+  name?: string;
 }
 
 export interface UserState {
@@ -15,7 +18,7 @@ const initialState: UserState = {
 };
 
 const userSlice = createSlice({
-  name: "user",
+  name: "users",
   initialState,
   reducers: {
     enableLoading: (state) => {
@@ -27,6 +30,7 @@ const userSlice = createSlice({
     cacheUser: (state, action) => {
       const index = action.payload.login;
       state.cachedUsers[index] = action.payload;
+      state.isLoading = false;
     },
   },
 });

@@ -8,13 +8,13 @@ import api from "./middleware/api";
 // use this for useSelector returned state
 export interface storeProps {
   search: SearchState;
-  user: UserState;
+  users: UserState;
 }
 
 const store = configureStore({
   reducer: {
     search: searchSlice,
-    user: userSlice,
+    users: userSlice,
   },
   middleware: (defaultMiddleware) => [...defaultMiddleware(), api],
 });

@@ -45,7 +45,7 @@ export default function SearchBox() {
       type: "callApi",
       payload: {
         url: config.apiBaseURL + config.apiUserSearch + localValue,
-        onSearch: "search/searching",
+        onStart: "search/searching",
         onSuccess: "search/setItems",
       },
     });
