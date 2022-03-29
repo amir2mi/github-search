@@ -5,6 +5,7 @@ import { storeProps } from "../../store";
 import config from "../../config";
 import UserInfo from "../../layout/UserInfo";
 import UserStates from "../../layout/UserStates";
+import UserRepos from "../../layout/UserRepos";
 import { Container, Loading } from "../../components";
 import { disableLoading } from "../../store/users";
 
@@ -48,6 +49,7 @@ export default function UserPage() {
         <>
           <UserInfo />
           <UserStates />
+          {cachedUsers[username].repos && <UserRepos />}
         </>
       )}
     </Container>
