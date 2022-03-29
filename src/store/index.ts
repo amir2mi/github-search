@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import searchSlice from "./searchSlice";
-import type { SearchState } from "./searchSlice";
+import searchSlice from "./search";
+import type { SearchState } from "./search";
 
 // use this for useSelector returned state
 export interface storeProps {

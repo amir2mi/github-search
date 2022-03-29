@@ -2,7 +2,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { X, Search } from "react-feather";
 import { useDispatch } from "react-redux";
-import { setSearchValue } from "../../store/searchSlice";
+import { setSearchValue } from "../../store/search";
 import { Button, Input } from "../../components";
 import "./style.scss";
 

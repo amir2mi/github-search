@@ -16,6 +16,6 @@ export default function SearchResult() {
       ))}
     </section>
   ) : (
-    <h3 className="anim-fade-in text-center">{isLoading ? "Loading..." : `No results for "${value}"`}</h3>
+    <h3 className="anim-fade-in text-center">{isLoading ?  "Loading...": `No results for "${value}"`}</h3>
   );
 }
