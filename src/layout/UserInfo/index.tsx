@@ -29,7 +29,7 @@ export default function UserInfo() {
         <img className="avatar" src={user.avatar_url} alt={user.name} />
         <div className="on-hover">
           <GitHub size="48" />
-          <p>Go To GitHub</p>
+          <p>Go to GitHub</p>
         </div>
       </a>
 

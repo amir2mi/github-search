@@ -20,9 +20,8 @@
         transition-delay: 0.15s;
         opacity: 1;
 
-        p {
-          transform: translateY(0);
-          opacity: 1;
+        svg {
+          animation: rise-in 0.25s 0.1s;
         }
       }
     }
@@ -57,9 +56,7 @@
 
       p {
         margin: 0.5em 0 0;
-        transform: translateY(1.5em);
-        opacity: 0;
-        transition: all ease 0.2s 0.1s;
+        opacity: 0.5;
       }
     }
 
