@@ -25,6 +25,7 @@ export default function UserRepos() {
         user.repos.length > 0 &&
         user.repos.map(({ name, description, homepage, license, html_url, stargazers_count, topics }: RepoProps) => (
           <RepositoryBox
+            className="anim-rise-in"
             key={name}
             description={description}
             homepage={homepage}
