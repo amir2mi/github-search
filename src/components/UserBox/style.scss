@@ -56,7 +56,11 @@
   }
 
   .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-transform: capitalize;
+    padding: 0.18em 0.5em;
     margin-top: 0;
   }
 }
