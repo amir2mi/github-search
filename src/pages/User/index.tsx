@@ -6,6 +6,7 @@ import config from "../../config";
 import UserInfo from "../../layout/UserInfo";
 import UserStates from "../../layout/UserStates";
 import UserRepos from "../../layout/UserRepos";
+import UserNav from "../../layout/UserNav";
 import { Container, Loading } from "../../components";
 import { disableLoading } from "../../store/users";
 
@@ -43,15 +44,18 @@ export default function UserPage() {
   }, [cachedUsers, dispatch, username]);
 
   return (
-    <Container size="lg">
-      {isLoading && <Loading className="fixed-loading" />}
-      {username && cachedUsers[username] && (
-        <>
-          <UserInfo />
-          <UserStates />
-          {cachedUsers[username].repos && <UserRepos />}
-        </>
-      )}
-    </Container>
+    <>
+      {username && cachedUsers[username] && <UserNav />}
+      <Container size="lg">
+        {isLoading && <Loading className="fixed-loading" />}
+        {username && cachedUsers[username] && (
+          <>
+            <UserInfo />
+            <UserStates />
+            {cachedUsers[username].repos && <UserRepos />}
+          </>
+        )}
+      </Container>
+    </>
   );
 }

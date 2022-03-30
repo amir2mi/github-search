@@ -1,0 +1,30 @@
+.user-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  justify-content: space-between;
+  padding: 1em;
+  background: #fff;
+
+  .hireable {
+    svg {
+      margin-right: 0.25em;
+    }
+  }
+}
+
+.go-back {
+  text-decoration: none;
+  color: #090d10;
+
+  svg {
+    transition: transform ease 0.15s;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: translateX(-0.25em);
+    }
+  }
+}
