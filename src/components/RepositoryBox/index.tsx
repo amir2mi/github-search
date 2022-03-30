@@ -1,7 +1,9 @@
 import { Folder, GitHub, Home, Star } from "react-feather";
+import clsx from "clsx";
 import "./style.scss";
 
 interface RepositoryBoxProps {
+  [key: string]: any;
   description: string;
   homepage: string;
   license: string;
@@ -12,10 +14,10 @@ interface RepositoryBoxProps {
 }
 
 export default function RepositoryBox(props: RepositoryBoxProps) {
-  const { description, homepage, license, name, stars, topics, url } = props;
+  const { className, description, homepage, license, name, stars, topics, url } = props;
 
   return (
-    <article className="repository-box">
+    <article className={clsx("repository-box", className)}>
       <Folder className="icon" />
       <div className="right-side">
         <div className="title-wrapper">
@@ -30,14 +32,18 @@ export default function RepositoryBox(props: RepositoryBoxProps) {
         </div>
         <p className="description">{description}</p>
         <div className="links">
-          <a href={homepage} target="_blank" className="button" rel="noreferrer">
-            <Home />
-            Homepage
-          </a>
-          <a href={url} target="_blank" className="button" rel="noreferrer">
-            <GitHub />
-            GitHub Page
-          </a>
+          {url && (
+            <a href={url} target="_blank" className="button" rel="noreferrer">
+              <GitHub />
+              GitHub Page
+            </a>
+          )}
+          {homepage && (
+            <a href={homepage} target="_blank" className="button" rel="noreferrer">
+              <Home />
+              Homepage
+            </a>
+          )}
         </div>
 
         {topics.length > 0 && (
