@@ -8,8 +8,9 @@ interface RepoProps {
   name: string;
   description: string;
   homepage: string;
-  license: { name: string };
   html_url: string;
+  license: { name: string };
+  stargazers_count: number;
   topics: string[];
 }
 
@@ -22,15 +23,16 @@ export default function UserRepos() {
     <div className="user-repos">
       {user.repos &&
         user.repos.length > 0 &&
-        user.repos.map(({ name, description, homepage, license, html_url, topics }: RepoProps) => (
+        user.repos.map(({ name, description, homepage, license, html_url, stargazers_count, topics }: RepoProps) => (
           <RepositoryBox
             key={name}
             description={description}
             homepage={homepage}
             license={(license && license.name) || "Unknown"}
             name={name}
-            url={html_url}
             topics={topics}
+            stars={stargazers_count}
+            url={html_url}
           />
         ))}
     </div>

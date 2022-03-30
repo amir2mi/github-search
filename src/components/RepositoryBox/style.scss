@@ -47,9 +47,22 @@
     margin: 0;
   }
 
-  .license {
-    font-size: 0.75em;
+  .title-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.85em;
     opacity: 0.5;
+
+    .stars svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 0.18em;
+    }
+
+    .license {
+      font-size: 0.9em;
+    }
   }
 
   .description {

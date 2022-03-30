@@ -1,4 +1,4 @@
-import { Folder, GitHub, Home } from "react-feather";
+import { Folder, GitHub, Home, Star } from "react-feather";
 import "./style.scss";
 
 interface RepositoryBoxProps {
@@ -6,12 +6,13 @@ interface RepositoryBoxProps {
   homepage: string;
   license: string;
   name: string;
-  url: string;
   topics: string[];
+  stars: number;
+  url: string;
 }
 
 export default function RepositoryBox(props: RepositoryBoxProps) {
-  const { description, homepage, license, name, url, topics } = props;
+  const { description, homepage, license, name, stars, topics, url } = props;
 
   return (
     <article className="repository-box">
@@ -19,7 +20,13 @@ export default function RepositoryBox(props: RepositoryBoxProps) {
       <div className="right-side">
         <div className="title-wrapper">
           <h3 className="title">{name}</h3>
-          <span className="license">{license}</span>
+          <div className="title-info">
+            <span className="stars flex-center">
+              <Star />
+              {stars}
+            </span>
+            <span className="license">{license}</span>
+          </div>
         </div>
         <p className="description">{description}</p>
         <div className="links">
