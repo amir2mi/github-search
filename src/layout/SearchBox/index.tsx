@@ -69,6 +69,7 @@ export default function SearchBox() {
           </Button>
         )}
         <Input
+          autoFocus
           type="search"
           value={localValue}
           placeholder="Enter Username"
