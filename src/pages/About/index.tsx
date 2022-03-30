@@ -5,7 +5,7 @@ export default function AboutPage() {
   useEffect(() => {
     document.title = `About`;
   }, []);
-``
+
   return (
     <Container size="lg">
       <h2>About Page</h2>
