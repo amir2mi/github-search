@@ -87,12 +87,15 @@
   }
 
   .topics {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 0.5em;
 
     .topic {
+      white-space: nowrap;
       font-size: 0.75em;
       padding: 0.25em 0.5em;
-      margin-right: 0.5em;
+      margin: 0 0.5em 0.5em 0;
       color: #fff;
       background: #090d10;
       border-radius: 0.5em;
