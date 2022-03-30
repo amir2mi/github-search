@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { GitHub } from "react-feather";
@@ -8,6 +9,10 @@ export default function UserInfo() {
   const { username } = useParams();
   const { cachedUsers } = useSelector((state: storeProps) => state.users);
   const user = username && cachedUsers[username];
+
+  useEffect(() => {
+    document.title = `${username}'s Profile`;
+  }, []);
 
   return (
     <div className="user-info flex-center">
