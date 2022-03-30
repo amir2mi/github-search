@@ -11,8 +11,8 @@ export default function UserInfo() {
   const user = username && cachedUsers[username];
 
   useEffect(() => {
-    document.title = `${username}'s Profile`;
-  }, []);
+    document.title = `${user.name || user.login}'s Profile`;
+  }, [user]);
 
   return (
     <div className="user-info flex-center">
